@@ -1,6 +1,6 @@
 {
   "name": "@fforge/flameforge-database",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "the assmat database",
   "main": "./dist/index.js",
   "files": [
