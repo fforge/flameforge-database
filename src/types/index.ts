@@ -13,8 +13,8 @@ export class DatabaseDocument {
 
 export class ReqResBase {
   method?: any
-  model!: Model
-  store!: Store
+  model?: Model
+  store?: Store
 }
 
 export class Request extends ReqResBase {

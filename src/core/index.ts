@@ -19,7 +19,7 @@ export default class Core<T> {
   }: StorageCoreOptions<T>) {
     this.model = model
     this.store = store
-    debug('Initialize: %s', model)
+    debug('Initialize: %o', model)
   }
 
   public async get (request: Request): Promise<ObjectLiteral[]> {
