@@ -1,10 +1,10 @@
-import { stores } from "#stores"
-import { auth_stores } from "#stores/auth"
-import { characters_stores } from "#stores/characters"
+import { Stores } from "#stores"
+import { AuthStores } from "#stores/auth"
+import { CharactersStores } from "#stores/characters"
 
-export type AuthStore = keyof typeof auth_stores
-export type CharactersStore = keyof typeof characters_stores
-export type Store = keyof typeof stores
+export type AuthStore = keyof AuthStores
+export type CharactersStore = keyof CharactersStores
+export type Store = keyof Stores
 export type Model = AuthStore | CharactersStore
 
 export class DatabaseDocument {

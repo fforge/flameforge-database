@@ -1,14 +1,9 @@
-import { auth_stores } from '#stores/auth'
-import { characters_stores } from '#stores/characters'
+import { AuthStores, initAuthStores } from '#stores/auth'
+import { CharactersStores, initCharactersStores } from '#stores/characters'
 import { STORE_AUTH, STORE_CHARACTERS } from "#constants"
+import { DataSource } from 'typeorm'
 
-export const stores = {
-  [STORE_AUTH]: auth_stores,
-  [STORE_CHARACTERS]: characters_stores,
+export type Stores = {
+  [STORE_AUTH]: AuthStores,
+  [STORE_CHARACTERS]: CharactersStores,
 }
-
-// export function init(): Storage {
-//   return {
-//     [ACCOUNT]: new AccountStore,
-//   }
-// }
