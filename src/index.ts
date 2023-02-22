@@ -14,6 +14,6 @@ export function init(data_source: DataSource): Stores {
     [STORE_AUTH]: initAuthStores(data_source),
     [STORE_CHARACTERS]: initCharactersStores(data_source),
   }
-  debug('Stores Initialized %s', stores)
+  debug('Stores Initialized %o', stores)
   return stores
 }

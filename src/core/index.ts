@@ -19,7 +19,6 @@ export default class Core<T> {
   }: StorageCoreOptions<T>) {
     this.model = model
     this.store = store
-    debug('Initialize: %o', model)
   }
 
   public async get (request: Request): Promise<ObjectLiteral[]> {
@@ -28,7 +27,7 @@ export default class Core<T> {
     const limit = request?.query?.options?.limit || 25
     const fields = request?.query?.populate?.fields || ''
     const sort = request?.query?.options?.sort || { _id: -1 }
-    debug('GET [ $s ]:[ %s ] store=%o request=%o', this.store, this.model, this.store, { fields, filters, skip, limit, sort })
+    debug('GET [ %s ] request=%o', this.model, { fields, filters, skip, limit, sort })
     return this.store.find(filters)
   }
 
@@ -36,22 +35,22 @@ export default class Core<T> {
     const filters = request?.query?.filters
     const fields = request?.query?.populate?.fields || ''
     if (!filters) return undefined
-    debug('READ [ $s ]:[ %s ] REQUEST=%o FILTERS=%o FILTERS=%o', this.store, this.model, request, filters, fields)
+    debug('READ [ %s ] REQUEST=%o FILTERS=%o FILTERS=%o', this.model, request, filters, fields)
     return this.store.findOne(filters)
   }
 
   public async post (request: Request): Promise<DeepPartial<ObjectLiteral>> {
-    debug('POST [ $s ]:[ %s ] request=%o', this.store, this.model, request)
+    debug('POST [ %s ] request=%o', this.model, request)
     return this.store.save(request.payload)
   }
 
   public async put (request: Request): Promise<DeepPartial<ObjectLiteral>> {
-    debug('PUT [ $s ]:[ %s ] request=%o', this.store, this.model, request)
+    debug('PUT [ %s ] request=%o', this.model, request)
     return this.store.save(request.payload)
   }
 
   public async delete (request: Request): Promise<ObjectLiteral> {
-    debug('DELETE [ $s ]:[ %s ] request=%o', this.store, this.model, request)
+    debug('DELETE [ %s ] request=%o', this.model, request)
     return this.store.remove({ id: request.payload.id })
   }
 }
