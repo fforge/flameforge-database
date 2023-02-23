@@ -28,7 +28,7 @@ export default class Core<T> {
     const fields = request?.query?.populate?.fields || ''
     const sort = request?.query?.options?.sort || { _id: -1 }
     debug('GET [ %s ] request=%o', this.model, { fields, filters, skip, limit, sort })
-    return this.store.find(filters)
+    return this.store.find()
   }
 
   public async read (request: Request): Promise<ObjectLiteral | null | undefined> {
