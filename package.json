@@ -23,7 +23,7 @@
     "type": "git",
     "url": "git+https://github.com/fforge/flameforge-database.git"
   },
-  "author": "",
+  "author": "alexis-piquet",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/fforge/flameforge-database/issues"
