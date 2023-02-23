@@ -1,6 +1,6 @@
 {
   "name": "@flameforge/flameforge-database",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "the flameforge database",
   "main": "./dist/index.js",
   "files": [
