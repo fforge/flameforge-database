@@ -1,5 +1,5 @@
 {
-  "name": "@fforge/flameforge-database",
+  "name": "@flameforge/flameforge-database",
   "version": "2.0.6",
   "description": "the flameforge database",
   "main": "./dist/index.js",
