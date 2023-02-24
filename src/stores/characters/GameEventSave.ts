@@ -6,7 +6,8 @@ import Core from '#core'
 export class GameEventSaveStore extends Core<GameEventSave> {
   constructor (data_source: DataSource) {
     super({
-      model: new GameEventSave,
+      manager: data_source.manager,
+      model:  GameEventSave,
       store: data_source.getRepository(GAME_EVENT_SAVE),
     })
   }

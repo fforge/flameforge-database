@@ -6,7 +6,8 @@ import Core from '#core'
 export class PvpstatsBattlegroundsStore extends Core<PvpstatsBattlegrounds> {
   constructor (data_source: DataSource) {
     super({
-      model: new PvpstatsBattlegrounds,
+      manager: data_source.manager,
+      model:  PvpstatsBattlegrounds,
       store: data_source.getRepository(PVPSTATS_BATTLEGROUNDS),
     })
   }

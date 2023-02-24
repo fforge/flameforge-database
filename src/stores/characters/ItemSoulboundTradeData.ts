@@ -6,7 +6,8 @@ import Core from '#core'
 export class ItemSoulboundTradeDataStore extends Core<ItemSoulboundTradeData> {
   constructor (data_source: DataSource) {
     super({
-      model: new ItemSoulboundTradeData,
+      manager: data_source.manager,
+      model:  ItemSoulboundTradeData,
       store: data_source.getRepository(ITEM_SOULBOUND_TRADE_DATA),
     })
   }

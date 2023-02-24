@@ -116,11 +116,11 @@ export class Account {
   })
   battlenetIndex?: Nullable<number>
 
-  @OneToMany(
-    () => RbacAccountPermissions,
-    (rbacAccountPermissions) => rbacAccountPermissions.account
-  )
-  rbacAccountPermissions!: RbacAccountPermissions[]
+  // @OneToMany(
+  //   () => RbacAccountPermissions,
+  //   (rbacAccountPermissions) => rbacAccountPermissions.account
+  // )
+  // rbacAccountPermissions!: RbacAccountPermissions[]
 
   @ManyToOne(
     () => BattlenetAccounts,

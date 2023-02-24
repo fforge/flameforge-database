@@ -6,7 +6,8 @@ import Core from '#core'
 export class LfgDataStore extends Core<LfgData> {
   constructor (data_source: DataSource) {
     super({
-      model: new LfgData,
+      manager: data_source.manager,
+      model:  LfgData,
       store: data_source.getRepository(LFG_DATA),
     })
   }

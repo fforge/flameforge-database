@@ -6,7 +6,8 @@ import Core from '#core'
 export class GuildEventlogStore extends Core<GuildEventlog> {
   constructor (data_source: DataSource) {
     super({
-      model: new GuildEventlog,
+      manager: data_source.manager,
+      model:  GuildEventlog,
       store: data_source.getRepository(GUILD_EVENTLOG),
     })
   }

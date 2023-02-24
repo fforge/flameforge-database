@@ -6,7 +6,8 @@ import Core from '#core'
 export class CharacterSpellStore extends Core<CharacterSpell> {
   constructor (data_source: DataSource) {
     super({
-      model: new CharacterSpell,
+      manager: data_source.manager,
+      model:  CharacterSpell,
       store: data_source.getRepository(CHARACTER_SPELL),
     })
   }

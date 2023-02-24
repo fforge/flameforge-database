@@ -5,6 +5,10 @@ import Core from '#core'
 
 export class AutobroadcastStore extends Core<Autobroadcast> {
   constructor (data_source: DataSource) {
-    super({ model: new Autobroadcast, store: data_source.getRepository(AUTOBROADCAST) })
+    super({
+      manager: data_source.manager,
+      model:  Autobroadcast,
+      store: data_source.getRepository(AUTOBROADCAST),
+    })
   }
 }

@@ -6,7 +6,8 @@ import Core from '#core'
 export class RespawnStore extends Core<Respawn> {
   constructor (data_source: DataSource) {
     super({
-      model: new Respawn,
+      manager: data_source.manager,
+      model:  Respawn,
       store: data_source.getRepository(RESPAWN),
     })
   }

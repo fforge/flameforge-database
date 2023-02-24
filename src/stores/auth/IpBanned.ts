@@ -5,6 +5,10 @@ import Core from '#core'
 
 export class IpBannedStore extends Core<IpBanned> {
   constructor (data_source: DataSource) {
-    super({ model: new IpBanned, store: data_source.getRepository(IP_BANNED) })
+    super({
+      manager: data_source.manager,
+      model:  IpBanned,
+      store: data_source.getRepository(IP_BANNED),
+    })
   }
 }

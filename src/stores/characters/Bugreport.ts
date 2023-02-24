@@ -6,7 +6,8 @@ import Core from '#core'
 export class BugreportStore extends Core<Bugreport> {
   constructor (data_source: DataSource) {
     super({
-      model: new Bugreport,
+      manager: data_source.manager,
+      model:  Bugreport,
       store: data_source.getRepository(BUGREPORT),
     })
   }

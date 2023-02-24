@@ -6,7 +6,8 @@ import Core from '#core'
 export class AuctionbiddersStore extends Core<Auctionbidders> {
   constructor (data_source: DataSource) {
     super({
-      model: new Auctionbidders,
+      manager: data_source.manager,
+      model:  Auctionbidders,
       store: data_source.getRepository(AUCTIONBIDDERS),
     })
   }

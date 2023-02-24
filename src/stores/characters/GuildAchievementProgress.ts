@@ -6,7 +6,8 @@ import Core from '#core'
 export class GuildAchievementProgressStore extends Core<GuildAchievementProgress> {
   constructor (data_source: DataSource) {
     super({
-      model: new GuildAchievementProgress,
+      manager: data_source.manager,
+      model:  GuildAchievementProgress,
       store: data_source.getRepository(GUILD_ACHIEVEMENT_PROGRESS),
     })
   }

@@ -38,12 +38,12 @@ export class RbacAccountPermissions {
   })
   realmId!: number
 
-  @ManyToOne(() => Account, (account) => account.rbacAccountPermissions, {
-    onDelete: 'CASCADE',
-    onUpdate: 'RESTRICT',
-  })
-  @JoinColumn([{ name: 'accountId', referencedColumnName: 'id' }])
-  account!: Account
+  // @ManyToOne(() => Account, (account) => account.rbacAccountPermissions, {
+  //   onDelete: 'CASCADE',
+  //   onUpdate: 'RESTRICT',
+  // })
+  // @JoinColumn([{ name: 'accountId', referencedColumnName: 'id' }])
+  // account!: Account
 
   @ManyToOne(
     () => RbacPermissions,

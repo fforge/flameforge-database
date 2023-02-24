@@ -6,7 +6,8 @@ import Core from '#core'
 export class GuildBankItemStore extends Core<GuildBankItem> {
   constructor (data_source: DataSource) {
     super({
-      model: new GuildBankItem,
+      manager: data_source.manager,
+      model:  GuildBankItem,
       store: data_source.getRepository(GUILD_BANK_ITEM),
     })
   }

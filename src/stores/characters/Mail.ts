@@ -6,7 +6,8 @@ import Core from '#core'
 export class MailStore extends Core<Mail> {
   constructor (data_source: DataSource) {
     super({
-      model: new Mail,
+      manager: data_source.manager,
+      model:  Mail,
       store: data_source.getRepository(MAIL),
     })
   }

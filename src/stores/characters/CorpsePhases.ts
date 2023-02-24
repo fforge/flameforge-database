@@ -6,7 +6,8 @@ import Core from '#core'
 export class CorpsePhasesStore extends Core<CorpsePhases> {
   constructor (data_source: DataSource) {
     super({
-      model: new CorpsePhases,
+      manager: data_source.manager,
+      model:  CorpsePhases,
       store: data_source.getRepository(CORPSE_PHASES),
     })
   }

@@ -6,7 +6,8 @@ import Core from '#core'
 export class CalendarInvitesStore extends Core<CalendarInvites> {
   constructor (data_source: DataSource) {
     super({
-      model: new CalendarInvites,
+      manager: data_source.manager,
+      model:  CalendarInvites,
       store: data_source.getRepository(CALENDAR_INVITES),
     })
   }

@@ -5,6 +5,10 @@ import Core from '#core'
 
 export class RbacPermissionsStore extends Core<RbacPermissions> {
   constructor (data_source: DataSource) {
-    super({ model: new RbacPermissions, store: data_source.getRepository(RBAC_PERMISSIONS) })
+    super({
+      manager: data_source.manager,
+      model:  RbacPermissions,
+      store: data_source.getRepository(RBAC_PERMISSIONS),
+    })
   }
 }

@@ -6,7 +6,8 @@ import Core from '#core'
 export class GuildMemberWithdrawStore extends Core<GuildMemberWithdraw> {
   constructor (data_source: DataSource) {
     super({
-      model: new GuildMemberWithdraw,
+      manager: data_source.manager,
+      model:  GuildMemberWithdraw,
       store: data_source.getRepository(GUILD_MEMBER_WITHDRAW),
     })
   }

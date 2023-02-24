@@ -6,7 +6,8 @@ import Core from '#core'
 export class WorldStateValueStore extends Core<WorldStateValue> {
   constructor (data_source: DataSource) {
     super({
-      model: new WorldStateValue,
+      manager: data_source.manager,
+      model:  WorldStateValue,
       store: data_source.getRepository(WORLD_STATE_VALUE),
     })
   }

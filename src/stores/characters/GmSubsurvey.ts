@@ -6,7 +6,8 @@ import Core from '#core'
 export class GmSubsurveyStore extends Core<GmSubsurvey> {
   constructor (data_source: DataSource) {
     super({
-      model: new GmSubsurvey,
+      manager: data_source.manager,
+      model:  GmSubsurvey,
       store: data_source.getRepository(GM_SUBSURVEY),
     })
   }

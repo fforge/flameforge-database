@@ -6,7 +6,8 @@ import Core from '#core'
 export class GuildRankStore extends Core<GuildRank> {
   constructor (data_source: DataSource) {
     super({
-      model: new GuildRank,
+      manager: data_source.manager,
+      model:  GuildRank,
       store: data_source.getRepository(GUILD_RANK),
     })
   }

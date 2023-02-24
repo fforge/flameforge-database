@@ -6,7 +6,8 @@ import Core from '#core'
 export class CharacterSocialStore extends Core<CharacterSocial> {
   constructor (data_source: DataSource) {
     super({
-      model: new CharacterSocial,
+      manager: data_source.manager,
+      model:  CharacterSocial,
       store: data_source.getRepository(CHARACTER_SOCIAL),
     })
   }

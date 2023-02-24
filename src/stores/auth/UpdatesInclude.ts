@@ -5,6 +5,10 @@ import Core from '#core'
 
 export class AuthUpdatesIncludeStore extends Core<UpdatesInclude> {
   constructor (data_source: DataSource) {
-    super({ model: new UpdatesInclude, store: data_source.getRepository(AUTH_UPDATES_INCLUDE) })
+    super({
+      manager: data_source.manager,
+      model:  UpdatesInclude,
+      store: data_source.getRepository(AUTH_UPDATES_INCLUDE),
+    })
   }
 }

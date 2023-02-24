@@ -5,6 +5,10 @@ import Core from '#core'
 
 export class BattlenetAccountBansStore extends Core<BattlenetAccountBans> {
   constructor (data_source: DataSource) {
-    super({ model: new BattlenetAccountBans, store: data_source.getRepository(BATTLENET_ACCOUNT_BANS) })
+    super({
+      manager: data_source.manager,
+      model:  BattlenetAccountBans,
+      store: data_source.getRepository(BATTLENET_ACCOUNT_BANS),
+    })
   }
 }

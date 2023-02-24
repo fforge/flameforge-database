@@ -5,6 +5,10 @@ import Core from '#core'
 
 export class RealmlistStore extends Core<Realmlist> {
   constructor (data_source: DataSource) {
-    super({ model: new Realmlist, store: data_source.getRepository(REALMLIST) })
+    super({
+      manager: data_source.manager,
+      model:  Realmlist,
+      store: data_source.getRepository(REALMLIST),
+    })
   }
 }

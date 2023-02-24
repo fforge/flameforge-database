@@ -6,7 +6,8 @@ import Core from '#core'
 export class CharacterQueststatusDailyStore extends Core<CharacterQueststatusDaily> {
   constructor (data_source: DataSource) {
     super({
-      model: new CharacterQueststatusDaily,
+      manager: data_source.manager,
+      model:  CharacterQueststatusDaily,
       store: data_source.getRepository(CHARACTER_QUESTSTATUS_DAILY),
     })
   }

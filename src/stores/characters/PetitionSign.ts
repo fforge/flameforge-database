@@ -6,7 +6,8 @@ import Core from '#core'
 export class PetitionSignStore extends Core<PetitionSign> {
   constructor (data_source: DataSource) {
     super({
-      model: new PetitionSign,
+      manager: data_source.manager,
+      model:  PetitionSign,
       store: data_source.getRepository(PETITION_SIGN),
     })
   }

@@ -6,7 +6,8 @@ import Core from '#core'
 export class InstanceResetStore extends Core<InstanceReset> {
   constructor (data_source: DataSource) {
     super({
-      model: new InstanceReset,
+      manager: data_source.manager,
+      model:  InstanceReset,
       store: data_source.getRepository(INSTANCE_RESET),
     })
   }

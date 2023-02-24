@@ -1,19 +1,18 @@
-
 import { DataSource } from 'typeorm'
-import { initAuthStores } from '#stores/auth'
-import { initCharactersStores } from '#stores/characters'
+import { AuthStores, initAuthStores } from '#stores/auth'
+import { CharactersStores, initCharactersStores } from '#stores/characters'
+import { Store } from '#types'
 import { STORE_AUTH, STORE_CHARACTERS } from '#constants'
-import { Stores } from '#stores'
 import Debug from 'debug'
 
 const debug = Debug('flameforge-database')
 
-export function init(data_source: DataSource): Stores {
+export function init(store: Store, data_source: DataSource): AuthStores | CharactersStores {
   debug('Initializing stores....')
   const stores = {
-    [STORE_AUTH]: initAuthStores(data_source),
-    [STORE_CHARACTERS]: initCharactersStores(data_source),
+    [STORE_AUTH]: initAuthStores,
+    [STORE_CHARACTERS]: initCharactersStores,
   }
   debug('Stores Initialized %o', stores)
-  return stores
+  return stores[store](data_source)
 }

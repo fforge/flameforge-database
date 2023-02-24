@@ -6,7 +6,8 @@ import Core from '#core'
 export class ReservedNameStore extends Core<ReservedName> {
   constructor (data_source: DataSource) {
     super({
-      model: new ReservedName,
+      manager: data_source.manager,
+      model:  ReservedName,
       store: data_source.getRepository(RESERVED_NAME),
     })
   }

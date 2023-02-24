@@ -6,7 +6,8 @@ import Core from '#core'
 export class GmTicketStore extends Core<GmTicket> {
   constructor (data_source: DataSource) {
     super({
-      model: new GmTicket,
+      manager: data_source.manager,
+      model:  GmTicket,
       store: data_source.getRepository(GM_TICKET),
     })
   }

@@ -6,7 +6,8 @@ import Core from '#core'
 export class BannedAddonsStore extends Core<BannedAddons> {
   constructor (data_source: DataSource) {
     super({
-      model: new BannedAddons,
+      manager: data_source.manager,
+      model:  BannedAddons,
       store: data_source.getRepository(BANNED_ADDONS),
     })
   }

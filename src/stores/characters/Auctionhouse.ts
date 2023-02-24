@@ -6,7 +6,8 @@ import Core from '#core'
 export class AuctionhouseStore extends Core<Auctionhouse> {
   constructor (data_source: DataSource) {
     super({
-      model: new Auctionhouse,
+      manager: data_source.manager,
+      model:  Auctionhouse,
       store: data_source.getRepository(AUCTIONHOUSE),
     })
   }

@@ -6,7 +6,8 @@ import Core from '#core'
 export class ArenaTeamStore extends Core<ArenaTeam> {
   constructor (data_source: DataSource) {
     super({
-      model: new ArenaTeam,
+      manager: data_source.manager,
+      model:  ArenaTeam,
       store: data_source.getRepository(ARENA_TEAM),
     })
   }

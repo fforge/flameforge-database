@@ -6,7 +6,8 @@ import Core from '#core'
 export class LagReportsStore extends Core<LagReports> {
   constructor (data_source: DataSource) {
     super({
-      model: new LagReports,
+      manager: data_source.manager,
+      model:  LagReports,
       store: data_source.getRepository(LAG_REPORTS),
     })
   }

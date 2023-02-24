@@ -6,7 +6,8 @@ import Core from '#core'
 export class GuildFinderApplicantStore extends Core<GuildFinderApplicant> {
   constructor (data_source: DataSource) {
     super({
-      model: new GuildFinderApplicant,
+      manager: data_source.manager,
+      model:  GuildFinderApplicant,
       store: data_source.getRepository(GUILD_FINDER_APPLICANT),
     })
   }

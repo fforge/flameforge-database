@@ -6,7 +6,8 @@ import Core from '#core'
 export class CharacterAuraStore extends Core<CharacterAura> {
   constructor (data_source: DataSource) {
     super({
-      model: new CharacterAura,
+      manager: data_source.manager,
+      model:  CharacterAura,
       store: data_source.getRepository(CHARACTER_ARENA_STATS),
     })
   }

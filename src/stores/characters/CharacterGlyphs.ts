@@ -6,7 +6,8 @@ import Core from '#core'
 export class CharacterGlyphsStore extends Core<CharacterGlyphs> {
   constructor (data_source: DataSource) {
     super({
-      model: new CharacterGlyphs,
+      manager: data_source.manager,
+      model:  CharacterGlyphs,
       store: data_source.getRepository(CHARACTER_GLYPHS),
     })
   }

@@ -6,7 +6,8 @@ import Core from '#core'
 export class InstanceStore extends Core<Instance> {
   constructor (data_source: DataSource) {
     super({
-      model: new Instance,
+      manager: data_source.manager,
+      model:  Instance,
       store: data_source.getRepository(INSTANCE),
     })
   }

@@ -5,6 +5,10 @@ import Core from '#core'
 
 export class BattlenetModulesStore extends Core<BattlenetModules> {
   constructor (data_source: DataSource) {
-    super({ model: new BattlenetModules, store: data_source.getRepository(BATTLENET_MODULES) })
+    super({
+      manager: data_source.manager,
+      model:  BattlenetModules,
+      store: data_source.getRepository(BATTLENET_MODULES),
+    })
   }
 }

@@ -6,7 +6,8 @@ import Core from '#core'
 export class QuestTrackerStore extends Core<QuestTracker> {
   constructor (data_source: DataSource) {
     super({
-      model: new QuestTracker,
+      manager: data_source.manager,
+      model:  QuestTracker,
       store: data_source.getRepository(QUEST_TRACKER),
     })
   }

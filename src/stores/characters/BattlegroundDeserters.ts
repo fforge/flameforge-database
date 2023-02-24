@@ -6,7 +6,8 @@ import Core from '#core'
 export class BattlegroundDesertersStore extends Core<BattlegroundDeserters> {
   constructor (data_source: DataSource) {
     super({
-      model: new BattlegroundDeserters,
+      manager: data_source.manager,
+      model:  BattlegroundDeserters,
       store: data_source.getRepository(BATTLEGROUND_DESERTERS),
     })
   }

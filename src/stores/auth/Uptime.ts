@@ -5,6 +5,10 @@ import Core from '#core'
 
 export class UptimeStore extends Core<Uptime> {
   constructor (data_source: DataSource) {
-    super({ model: new Uptime, store: data_source.getRepository(UPTIME) })
+    super({
+      manager: data_source.manager,
+      model:  Uptime,
+      store: data_source.getRepository(UPTIME),
+    })
   }
 }

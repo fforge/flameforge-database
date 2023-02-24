@@ -5,6 +5,10 @@ import Core from '#core'
 
 export class LogsIpActionsStore extends Core<LogsIpActions> {
   constructor (data_source: DataSource) {
-    super({ model: new LogsIpActions, store: data_source.getRepository(LOGS_IP_ACTIONS) })
+    super({
+      manager: data_source.manager,
+      model:  LogsIpActions,
+      store: data_source.getRepository(LOGS_IP_ACTIONS),
+    })
   }
 }

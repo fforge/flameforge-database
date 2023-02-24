@@ -6,7 +6,8 @@ import Core from '#core'
 export class AccountTutorialStore extends Core<AccountTutorial> {
   constructor (data_source: DataSource) {
     super({
-      model: new AccountTutorial,
+      manager: data_source.manager,
+      model:  AccountTutorial,
       store: data_source.getRepository(ACCOUNT_TUTORIAL),
     })
   }

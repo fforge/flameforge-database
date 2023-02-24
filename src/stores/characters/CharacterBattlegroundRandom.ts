@@ -6,7 +6,8 @@ import Core from '#core'
 export class CharacterBattlegroundRandomStore extends Core<CharacterBattlegroundRandom> {
   constructor (data_source: DataSource) {
     super({
-      model: new CharacterBattlegroundRandom,
+      manager: data_source.manager,
+      model:  CharacterBattlegroundRandom,
       store: data_source.getRepository(CHARACTER_BATTLEGROUND_RANDOM),
     })
   }

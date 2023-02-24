@@ -6,7 +6,8 @@ import Core from '#core'
 export class CharacterAchievementStore extends Core<CharacterAchievement> {
   constructor (data_source: DataSource) {
     super({
-      model: new CharacterAchievement,
+      manager: data_source.manager,
+      model:  CharacterAchievement,
       store: data_source.getRepository(CHARACTER_ACHIEVEMENT),
     })
   }

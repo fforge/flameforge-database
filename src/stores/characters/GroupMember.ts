@@ -6,7 +6,8 @@ import Core from '#core'
 export class GroupMemberStore extends Core<GroupMember> {
   constructor (data_source: DataSource) {
     super({
-      model: new GroupMember,
+      manager: data_source.manager,
+      model:  GroupMember,
       store: data_source.getRepository(GROUP_MEMBER),
     })
   }

@@ -6,7 +6,8 @@ import Core from '#core'
 export class PetAuraStore extends Core<PetAura> {
   constructor (data_source: DataSource) {
     super({
-      model: new PetAura,
+      manager: data_source.manager,
+      model:  PetAura,
       store: data_source.getRepository(PET_AURA),
     })
   }

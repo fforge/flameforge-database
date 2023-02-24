@@ -6,7 +6,8 @@ import Core from '#core'
 export class CharacterVoidStorageStore extends Core<CharacterVoidStorage> {
   constructor (data_source: DataSource) {
     super({
-      model: new CharacterVoidStorage,
+      manager: data_source.manager,
+      model:  CharacterVoidStorage,
       store: data_source.getRepository(CHARACTER_VOID_STORAGE),
     })
   }

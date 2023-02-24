@@ -6,7 +6,8 @@ import Core from '#core'
 export class PoolQuestSaveStore extends Core<PoolQuestSave> {
   constructor (data_source: DataSource) {
     super({
-      model: new PoolQuestSave,
+      manager: data_source.manager,
+      model:  PoolQuestSave,
       store: data_source.getRepository(POOL_QUEST_SAVE),
     })
   }
