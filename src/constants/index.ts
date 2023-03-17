@@ -11,4 +11,4 @@ export const STORE_TYPES = [
 
 export type StoreType = typeof STORE_TYPES[number]
 
-export const DATASOURCE_TYPE = 'mariadb' as const
+export const DATASOURCE_TYPE = 'mysql' as const

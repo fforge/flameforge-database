@@ -1,6 +1,6 @@
 import { BattlenetAccounts } from '#models/auth/BattlenetAccounts'
 import { Column, Entity, Index, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn } from 'typeorm'
-import { RbacAccountPermissions } from '#models/auth/RbacAccountPermissions'
+// import { RbacAccountPermissions } from '#models/auth/RbacAccountPermissions'
 import { Nullable } from '#types'
 import { ACCOUNT, STORE_AUTH } from '#constants'
 

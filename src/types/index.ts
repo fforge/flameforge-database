@@ -32,7 +32,6 @@ export class Request extends ReqResBase {
   }
 }
 
-
 export interface MongoQueryOptions <T> {
   limit?: number
   skip?: number
