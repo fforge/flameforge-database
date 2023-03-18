@@ -1,4 +1,4 @@
-import { DeepPartial, EntityManager, EntityTarget, ObjectLiteral, Repository } from 'typeorm'
+import { DeepPartial, EntityManager, EntityTarget, FindOptionsWhere, ObjectLiteral, Repository } from 'typeorm'
 import { Request } from '#types'
 import Debug from 'debug'
 
@@ -32,10 +32,8 @@ export default class Core<T> extends Repository<ObjectLiteral>{
     debug('GET [ %s ] request=%o', this.name, request)
     return this.store.find()
   }
-
-  public async read (request: Request): Promise<ObjectLiteral | null | undefined> {
+  public async read (request: Request): Promise<ObjectLiteral | FindOptionsWhere<ObjectLiteral>[]> {
     const filters = request?.query?.filters
-    if (!filters) return undefined
     debug('READ [ %s ] REQUEST=%o FILTERS=%o FILTERS=%o', this.name, request, filters)
     return this.store.findBy(filters)
   }
