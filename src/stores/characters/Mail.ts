@@ -7,7 +7,8 @@ export class MailStore extends Core<Mail> {
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  Mail,
+      model: Mail,
+      name: MAIL,
       store: data_source.getRepository(MAIL),
     })
   }

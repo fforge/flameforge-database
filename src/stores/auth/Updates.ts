@@ -8,6 +8,7 @@ export class AuthUpdatesStore extends Core<Updates> {
     super({
       manager: data_source.manager,
       model:  Updates,
+      name: AUTH_UPDATES,
       store: data_source.getRepository(AUTH_UPDATES),
     })
   }

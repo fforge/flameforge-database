@@ -8,6 +8,7 @@ export class AuthUpdatesIncludeStore extends Core<UpdatesInclude> {
     super({
       manager: data_source.manager,
       model:  UpdatesInclude,
+      name: AUTH_UPDATES_INCLUDE,
       store: data_source.getRepository(AUTH_UPDATES_INCLUDE),
     })
   }

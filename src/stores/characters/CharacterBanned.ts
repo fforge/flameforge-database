@@ -7,7 +7,8 @@ export class CharacterBannedStore extends Core<CharacterBanned> {
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  CharacterBanned,
+      model: CharacterBanned,
+      name: CHARACTER_BANNED,
       store: data_source.getRepository(CHARACTER_BANNED),
     })
   }

@@ -8,6 +8,7 @@ export class AccountMutedStore extends Core<AccountMuted> {
     super({
       manager: data_source.manager,
       model:  AccountMuted,
+      name: ACCOUNT_MUTED,
       store: data_source.getRepository(ACCOUNT_MUTED),
     })
   }

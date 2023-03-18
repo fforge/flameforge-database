@@ -7,7 +7,8 @@ export class CharacterDeclinednameStore extends Core<CharacterDeclinedname> {
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  CharacterDeclinedname,
+      model: CharacterDeclinedname,
+      name: CHARACTER_DECLINEDNAME,
       store: data_source.getRepository(CHARACTER_DECLINEDNAME),
     })
   }

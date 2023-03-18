@@ -7,7 +7,8 @@ export class CharacterInventoryStore extends Core<CharacterInventory> {
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  CharacterInventory,
+      model: CharacterInventory,
+      name: CHARACTER_INVENTORY,
       store: data_source.getRepository(CHARACTER_INVENTORY),
     })
   }

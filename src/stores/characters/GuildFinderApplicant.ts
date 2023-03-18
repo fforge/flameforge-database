@@ -7,7 +7,8 @@ export class GuildFinderApplicantStore extends Core<GuildFinderApplicant> {
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  GuildFinderApplicant,
+      model: GuildFinderApplicant,
+      name: GUILD_FINDER_APPLICANT,
       store: data_source.getRepository(GUILD_FINDER_APPLICANT),
     })
   }

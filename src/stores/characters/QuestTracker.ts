@@ -7,7 +7,8 @@ export class QuestTrackerStore extends Core<QuestTracker> {
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  QuestTracker,
+      model: QuestTracker,
+      name: QUEST_TRACKER,
       store: data_source.getRepository(QUEST_TRACKER),
     })
   }

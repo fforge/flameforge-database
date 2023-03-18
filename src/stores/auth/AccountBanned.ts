@@ -8,6 +8,7 @@ export class AccountBannedStore extends Core<AccountBanned> {
     super({
       manager: data_source.manager,
       model: AccountBanned,
+      name: ACCOUNT_BANNED,
       store: data_source.getRepository(ACCOUNT_BANNED),
     })
   }

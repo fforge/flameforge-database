@@ -8,6 +8,7 @@ export class RealmlistStore extends Core<Realmlist> {
     super({
       manager: data_source.manager,
       model:  Realmlist,
+      name: REALMLIST,
       store: data_source.getRepository(REALMLIST),
     })
   }

@@ -7,7 +7,8 @@ export class PetitionSignStore extends Core<PetitionSign> {
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  PetitionSign,
+      model: PetitionSign,
+      name: PETITION_SIGN,
       store: data_source.getRepository(PETITION_SIGN),
     })
   }

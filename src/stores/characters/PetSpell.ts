@@ -7,7 +7,8 @@ export class PetSpellStore extends Core<PetSpell> {
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  PetSpell,
+      model: PetSpell,
+      name: PET_SPELL,
       store: data_source.getRepository(PET_SPELL),
     })
   }

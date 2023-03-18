@@ -8,6 +8,7 @@ export class AutobroadcastStore extends Core<Autobroadcast> {
     super({
       manager: data_source.manager,
       model:  Autobroadcast,
+      name: AUTOBROADCAST,
       store: data_source.getRepository(AUTOBROADCAST),
     })
   }

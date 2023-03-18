@@ -7,7 +7,8 @@ export class WardenActionStore extends Core<WardenAction> {
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  WardenAction,
+      model: WardenAction,
+      name: WARDEN_ACTION,
       store: data_source.getRepository(WARDEN_ACTION),
     })
   }

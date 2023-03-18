@@ -8,6 +8,7 @@ export class RbacLinkedPermissionsStore extends Core<RbacLinkedPermissions> {
     super({
       manager: data_source.manager,
       model:  RbacLinkedPermissions,
+      name: RBAC_LINKED_PERMISSIONS,
       store: data_source.getRepository(RBAC_LINKED_PERMISSIONS),
     })
   }

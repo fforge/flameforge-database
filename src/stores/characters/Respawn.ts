@@ -7,7 +7,8 @@ export class RespawnStore extends Core<Respawn> {
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  Respawn,
+      model: Respawn,
+      name: RESPAWN,
       store: data_source.getRepository(RESPAWN),
     })
   }

@@ -7,7 +7,8 @@ export class GameEventConditionSaveStore extends Core<GameEventConditionSave> {
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  GameEventConditionSave,
+      model: GameEventConditionSave,
+      name: GAME_EVENT_CONDITION_SAVE,
       store: data_source.getRepository(GAME_EVENT_CONDITION_SAVE),
     })
   }

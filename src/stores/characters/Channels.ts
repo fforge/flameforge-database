@@ -7,7 +7,8 @@ export class ChannelsStore extends Core<Channels> {
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  Channels,
+      model: Channels,
+      name: CHANNELS,
       store: data_source.getRepository(CHANNELS),
     })
   }

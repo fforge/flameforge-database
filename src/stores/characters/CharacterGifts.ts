@@ -7,7 +7,8 @@ export class CharacterGiftsStore extends Core<CharacterGifts> {
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  CharacterGifts,
+      model: CharacterGifts,
+      name: CHARACTER_GIFTS,
       store: data_source.getRepository(CHARACTER_GIFTS),
     })
   }

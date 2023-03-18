@@ -7,7 +7,8 @@ export class AuctionbiddersStore extends Core<Auctionbidders> {
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  Auctionbidders,
+      model: Auctionbidders,
+      name: AUCTIONBIDDERS,
       store: data_source.getRepository(AUCTIONBIDDERS),
     })
   }

@@ -7,7 +7,8 @@ export class CharactersUpdatesIncludeStore extends Core<UpdatesInclude> {
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  UpdatesInclude,
+      model: UpdatesInclude,
+      name: CHARACTERS_UPDATES_INCLUDE,
       store: data_source.getRepository(CHARACTERS_UPDATES_INCLUDE),
     })
   }

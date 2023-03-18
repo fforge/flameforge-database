@@ -7,7 +7,8 @@ export class AccountInstanceTimesStore extends Core<AccountInstanceTimes> {
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  AccountInstanceTimes,
+      model: AccountInstanceTimes,
+      name: ACCOUNT_INSTANCE_TIMES,
       store: data_source.getRepository(ACCOUNT_INSTANCE_TIMES),
     })
   }

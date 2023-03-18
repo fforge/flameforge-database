@@ -7,7 +7,8 @@ export class LfgDataStore extends Core<LfgData> {
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  LfgData,
+      model: LfgData,
+      name: LFG_DATA,
       store: data_source.getRepository(LFG_DATA),
     })
   }

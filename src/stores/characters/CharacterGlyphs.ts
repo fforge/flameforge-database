@@ -7,7 +7,8 @@ export class CharacterGlyphsStore extends Core<CharacterGlyphs> {
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  CharacterGlyphs,
+      model: CharacterGlyphs,
+      name: CHARACTER_GLYPHS,
       store: data_source.getRepository(CHARACTER_GLYPHS),
     })
   }

@@ -7,7 +7,8 @@ export class CalendarEventsStore extends Core<CalendarEvents> {
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  CalendarEvents,
+      model: CalendarEvents,
+      name: CALENDAR_EVENTS,
       store: data_source.getRepository(CALENDAR_EVENTS),
     })
   }

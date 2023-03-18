@@ -8,6 +8,7 @@ export class BattlenetAccountsStore extends Core<BattlenetAccounts> {
     super({
       manager: data_source.manager,
       model: BattlenetAccounts,
+      name: BATTLENET_ACCOUNTS,
       store: data_source.getRepository(BATTLENET_ACCOUNTS),
     })
   }

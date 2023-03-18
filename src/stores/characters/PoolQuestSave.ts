@@ -7,7 +7,8 @@ export class PoolQuestSaveStore extends Core<PoolQuestSave> {
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  PoolQuestSave,
+      model: PoolQuestSave,
+      name: POOL_QUEST_SAVE,
       store: data_source.getRepository(POOL_QUEST_SAVE),
     })
   }

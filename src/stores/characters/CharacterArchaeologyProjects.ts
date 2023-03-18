@@ -7,7 +7,8 @@ export class CharacterArchaeologyProjectsStore extends Core<CharacterArchaeology
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  CharacterArchaeologyProjects,
+      model: CharacterArchaeologyProjects,
+      name: CHARACTER_ARCHAEOLOGY_PROJECTS,
       store: data_source.getRepository(CHARACTER_ARCHAEOLOGY_PROJECTS),
     })
   }

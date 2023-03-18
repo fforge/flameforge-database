@@ -8,6 +8,7 @@ export class LogsIpActionsStore extends Core<LogsIpActions> {
     super({
       manager: data_source.manager,
       model:  LogsIpActions,
+      name: LOGS_IP_ACTIONS,
       store: data_source.getRepository(LOGS_IP_ACTIONS),
     })
   }

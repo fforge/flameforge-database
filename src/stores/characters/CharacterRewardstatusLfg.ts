@@ -7,7 +7,8 @@ export class CharacterRewardstatusLfgStore extends Core<CharacterRewardstatusLfg
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  CharacterRewardstatusLfg,
+      model: CharacterRewardstatusLfg,
+      name: CHARACTER_REWARDSTATUS_LFG,
       store: data_source.getRepository(CHARACTER_REWARDSTATUS_LFG),
     })
   }

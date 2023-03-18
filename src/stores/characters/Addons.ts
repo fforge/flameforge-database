@@ -7,7 +7,8 @@ export class AddonsStore extends Core<Addons> {
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  Addons,
+      model: Addons,
+      name: ADDONS,
       store: data_source.getRepository(ADDONS),
     })
   }

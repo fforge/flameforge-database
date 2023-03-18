@@ -7,7 +7,8 @@ export class BattlegroundDesertersStore extends Core<BattlegroundDeserters> {
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  BattlegroundDeserters,
+      model: BattlegroundDeserters,
+      name: BATTLEGROUND_DESERTERS,
       store: data_source.getRepository(BATTLEGROUND_DESERTERS),
     })
   }

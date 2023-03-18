@@ -7,7 +7,8 @@ export class ItemSoulboundTradeDataStore extends Core<ItemSoulboundTradeData> {
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  ItemSoulboundTradeData,
+      model: ItemSoulboundTradeData,
+      name: ITEM_SOULBOUND_TRADE_DATA,
       store: data_source.getRepository(ITEM_SOULBOUND_TRADE_DATA),
     })
   }

@@ -7,7 +7,8 @@ export class CorpseStore extends Core<Corpse> {
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  Corpse,
+      model: Corpse,
+      name: CORPSE,
       store: data_source.getRepository(CORPSE),
     })
   }

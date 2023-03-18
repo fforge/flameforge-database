@@ -7,7 +7,8 @@ export class CharacterCufProfilesStore extends Core<CharacterCufProfiles> {
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  CharacterCufProfiles,
+      model: CharacterCufProfiles,
+      name: CHARACTER_CUF_PROFILES,
       store: data_source.getRepository(CHARACTER_CUF_PROFILES),
     })
   }

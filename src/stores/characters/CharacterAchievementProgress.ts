@@ -7,7 +7,8 @@ export class CharacterAchievementProgressStore extends Core<CharacterAchievement
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  CharacterAchievementProgress,
+      model: CharacterAchievementProgress,
+      name: CHARACTER_ACHIEVEMENT_PROGRESS,
       store: data_source.getRepository(CHARACTER_ACHIEVEMENT_PROGRESS),
     })
   }

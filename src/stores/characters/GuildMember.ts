@@ -7,7 +7,8 @@ export class GuildMemberStore extends Core<GuildMember> {
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  GuildMember,
+      model: GuildMember,
+      name: GUILD_MEMBER,
       store: data_source.getRepository(GUILD_MEMBER),
     })
   }

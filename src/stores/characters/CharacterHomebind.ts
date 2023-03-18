@@ -7,7 +7,8 @@ export class CharacterHomebindStore extends Core<CharacterHomebind> {
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  CharacterHomebind,
+      model: CharacterHomebind,
+      name: CHARACTER_HOMEBIND,
       store: data_source.getRepository(CHARACTER_HOMEBIND),
     })
   }

@@ -7,7 +7,8 @@ export class GroupsStore extends Core<Groups> {
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  Groups,
+      model: Groups,
+      name: GROUPS,
       store: data_source.getRepository(GROUPS),
     })
   }

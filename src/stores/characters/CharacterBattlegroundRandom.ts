@@ -7,7 +7,8 @@ export class CharacterBattlegroundRandomStore extends Core<CharacterBattleground
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  CharacterBattlegroundRandom,
+      model: CharacterBattlegroundRandom,
+      name: CHARACTER_BATTLEGROUND_RANDOM,
       store: data_source.getRepository(CHARACTER_BATTLEGROUND_RANDOM),
     })
   }

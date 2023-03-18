@@ -7,7 +7,8 @@ export class GuildBankTabStore extends Core<GuildBankTab> {
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  GuildBankTab,
+      model: GuildBankTab,
+      name: GUILD_BANK_TAB,
       store: data_source.getRepository(GUILD_BANK_TAB),
     })
   }

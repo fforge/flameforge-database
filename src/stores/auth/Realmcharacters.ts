@@ -8,6 +8,7 @@ export class RealmcharactersStore extends Core<Realmcharacters> {
     super({
       manager: data_source.manager,
       model:  Realmcharacters,
+      name: REALMCHARACTERS,
       store: data_source.getRepository(REALMCHARACTERS),
     })
   }

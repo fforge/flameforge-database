@@ -7,7 +7,8 @@ export class GuildBankEventlogStore extends Core<GuildBankEventlog> {
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  GuildBankEventlog,
+      model: GuildBankEventlog,
+      name: GUILD_BANK_EVENTLOG,
       store: data_source.getRepository(GUILD_BANK_EVENTLOG),
     })
   }

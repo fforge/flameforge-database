@@ -7,7 +7,8 @@ export class ItemInstanceStore extends Core<ItemInstance> {
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  ItemInstance,
+      model: ItemInstance,
+      name: ITEM_INSTANCE,
       store: data_source.getRepository(ITEM_INSTANCE),
     })
   }

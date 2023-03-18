@@ -7,7 +7,8 @@ export class CharacterAuraStore extends Core<CharacterAura> {
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  CharacterAura,
+      model: CharacterAura,
+      name: CHARACTER_ARENA_STATS,
       store: data_source.getRepository(CHARACTER_ARENA_STATS),
     })
   }

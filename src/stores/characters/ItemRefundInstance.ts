@@ -7,7 +7,8 @@ export class ItemRefundInstanceStore extends Core<ItemRefundInstance> {
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  ItemRefundInstance,
+      model: ItemRefundInstance,
+      name: ITEM_REFUND_INSTANCE,
       store: data_source.getRepository(ITEM_REFUND_INSTANCE),
     })
   }

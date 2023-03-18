@@ -8,6 +8,7 @@ export class IpBannedStore extends Core<IpBanned> {
     super({
       manager: data_source.manager,
       model:  IpBanned,
+      name: IP_BANNED,
       store: data_source.getRepository(IP_BANNED),
     })
   }

@@ -7,7 +7,8 @@ export class GuildFinderGuildSettingsStore extends Core<GuildFinderGuildSettings
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  GuildFinderGuildSettings,
+      model: GuildFinderGuildSettings,
+      name: GUILD_FINDER_GUILD_SETTINGS,
       store: data_source.getRepository(GUILD_FINDER_GUILD_SETTINGS),
     })
   }

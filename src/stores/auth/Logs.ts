@@ -8,6 +8,7 @@ export class LogsStore extends Core<Logs> {
     super({
       manager: data_source.manager,
       model:  Logs,
+      name: LOGS,
       store: data_source.getRepository(LOGS),
     })
   }

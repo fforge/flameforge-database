@@ -7,7 +7,8 @@ export class BannedAddonsStore extends Core<BannedAddons> {
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  BannedAddons,
+      model: BannedAddons,
+      name: BANNED_ADDONS,
       store: data_source.getRepository(BANNED_ADDONS),
     })
   }

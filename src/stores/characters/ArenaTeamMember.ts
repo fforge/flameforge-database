@@ -7,7 +7,8 @@ export class ArenaTeamMemberStore extends Core<ArenaTeamMember> {
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  ArenaTeamMember,
+      model: ArenaTeamMember,
+      name: ARENA_TEAM_MEMBER,
       store: data_source.getRepository(ARENA_TEAM_MEMBER),
     })
   }

@@ -7,7 +7,8 @@ export class ItemLootItemsStore extends Core<ItemLootItems> {
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  ItemLootItems,
+      model: ItemLootItems,
+      name: ITEM_LOOT_ITEMS,
       store: data_source.getRepository(ITEM_LOOT_ITEMS),
     })
   }

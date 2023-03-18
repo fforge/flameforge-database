@@ -7,7 +7,8 @@ export class WorldVariableStore extends Core<WorldVariable> {
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  WorldVariable,
+      model: WorldVariable,
+      name: WORLD_VARIABLE,
       store: data_source.getRepository(WORLD_VARIABLE),
     })
   }

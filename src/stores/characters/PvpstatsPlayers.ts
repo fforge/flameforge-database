@@ -7,7 +7,8 @@ export class PvpstatsPlayersStore extends Core<PvpstatsPlayers> {
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  PvpstatsPlayers,
+      model: PvpstatsPlayers,
+      name: PVPSTATS_PLAYERS,
       store: data_source.getRepository(PVPSTATS_PLAYERS),
     })
   }

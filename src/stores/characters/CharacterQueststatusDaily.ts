@@ -7,7 +7,8 @@ export class CharacterQueststatusDailyStore extends Core<CharacterQueststatusDai
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  CharacterQueststatusDaily,
+      model: CharacterQueststatusDaily,
+      name: CHARACTER_QUESTSTATUS_DAILY,
       store: data_source.getRepository(CHARACTER_QUESTSTATUS_DAILY),
     })
   }

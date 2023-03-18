@@ -8,6 +8,7 @@ export class AccountAccessStore extends Core<AccountAccess> {
     super({
       manager: data_source.manager,
       model: AccountAccess,
+      name: ACCOUNT_ACCESS,
       store: data_source.getRepository(ACCOUNT_ACCESS),
     })
   }

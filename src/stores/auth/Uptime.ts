@@ -8,6 +8,7 @@ export class UptimeStore extends Core<Uptime> {
     super({
       manager: data_source.manager,
       model:  Uptime,
+      name: UPTIME,
       store: data_source.getRepository(UPTIME),
     })
   }

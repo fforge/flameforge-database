@@ -7,7 +7,8 @@ export class CharacterBattlegroundDataStore extends Core<CharacterBattlegroundDa
   constructor (data_source: DataSource) {
     super({
       manager: data_source.manager,
-      model:  CharacterBattlegroundData,
+      model: CharacterBattlegroundData,
+      name: CHARACTER_BATTLEGROUND_DATA,
       store: data_source.getRepository(CHARACTER_BATTLEGROUND_DATA),
     })
   }
